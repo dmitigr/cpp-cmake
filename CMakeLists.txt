@@ -18,6 +18,10 @@ cmake_minimum_required(VERSION 3.16)
 cmake_policy(VERSION 3.16)
 project(dmitigr_libs)
 
+if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.27)
+  cmake_policy(SET CMP0144 NEW)
+endif()
+
 if (NOT (UNIX OR WIN32))
   message(FATAL_ERROR "dmitigr_libs: unsupported platform")
 endif()
