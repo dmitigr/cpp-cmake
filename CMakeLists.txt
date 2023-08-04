@@ -47,6 +47,8 @@ set(DMITIGR_LIBS_DOXYGEN Off CACHE BOOL
   "Build configurations for Doxygen?")
 set(DMITIGR_LIBS_TESTS Off CACHE BOOL
   "Build tests?")
+set(DMITIGR_LIBS_GPIOD On CACHE BOOL
+  "Link to libgpiod where possible?")
 set(DMITIGR_LIBS_OPENSSL Off CACHE BOOL
   "Link to OpenSSL where possible?")
 set(DMITIGR_LIBS_SQLITE On CACHE BOOL
