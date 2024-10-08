@@ -47,10 +47,16 @@ set(DMITIGR_LIBS_DOXYGEN Off CACHE BOOL
   "Build configurations for Doxygen?")
 set(DMITIGR_LIBS_TESTS Off CACHE BOOL
   "Build tests?")
+set(DMITIGR_LIBS_GPIOD On CACHE BOOL
+  "Link libgpiod where required?")
+set(DMITIGR_LIBS_PQ On CACHE BOOL
+  "Link libpq where required?")
+set(DMITIGR_LIBS_SQLITE3 On CACHE BOOL
+  "Link SQLite3 where required?")
 set(DMITIGR_LIBS_OPENSSL Off CACHE BOOL
-  "Link to OpenSSL where possible?")
+  "Link to OpenSSL where required?")
 set(DMITIGR_LIBS_ZLIB Off CACHE BOOL
-  "Link to Zlib where possible?")
+  "Link to Zlib where required?")
 set(DMITIGR_LIBS_AIO "uv" CACHE STRING
   "What AIO to use? (\"uv\" - is the only option now.)")
 set(BUILD_SHARED_LIBS Off CACHE BOOL
