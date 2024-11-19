@@ -231,7 +231,12 @@ foreach(lib ${dmitigr_libs})
   set(dmlib dmitigr_${lib})
   set(DMLIB DMITIGR_${LIB})
 
-  include("${CMAKE_CURRENT_SOURCE_DIR}/${dmitigr_libs_subroot}/${lib}/cmake/${dmlib}.cmake")
+  include(
+    "${CMAKE_CURRENT_SOURCE_DIR}/${dmitigr_libs_subroot}/${lib}/cmake/${dmlib}.cmake")
+
+  if(${dmlib}_not_available)
+    continue()
+  endif()
 
   dmitigr_libs_set_library_info_lib_variables(${lib})
 
